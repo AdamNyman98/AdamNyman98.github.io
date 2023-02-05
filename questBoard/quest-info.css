@@ -1,0 +1,29 @@
+body {
+    background-color: #1a1a1a; /* dark background color */
+    font-family: 'Open Sans', sans-serif; /* font for text */
+    color: #fff; /* text color */
+  }
+  
+  #quest-info {
+    padding: 20px; /* add some padding to the quest info */
+    text-align: center; /* center the text inside the quest info */
+    background-color: #2f2f2f; /* dark gray background for the quest info */
+    border-radius: 10px; /* add rounded corners to the quest info */
+    box-shadow: 2px 2px 5px #000; /* add a subtle shadow to the quest info */
+    margin: 20px;
+  }
+  
+  #nav{
+    text-align: center;
+  }
+  #nav a{
+    color: #87CEFA;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  #nav a:hover {
+    color: #fff;
+    text-shadow: 1px 1px #87CEFA;
+  }
+  

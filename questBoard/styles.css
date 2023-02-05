@@ -1,0 +1,152 @@
+body {
+  background-color: #1a1a1a; /* dark background color */
+  font-family: 'Open Sans', sans-serif; /* font for text */
+  color: #fff; /* text color */
+}
+
+#quest-board {
+  display: flex; /* display quest cards in a row */
+  flex-wrap: wrap; /* allow quest cards to wrap to a new line if the screen is not wide enough */
+  justify-content: center; /* center the quest cards on the page */
+}
+
+.quest-card {
+  background-color: #2f2f2f; /* dark gray background for the quest card */
+  padding: 20px; /* add some padding to the quest card */
+  margin: 10px; /* add some margin between quest cards */
+  width: 300px; /* set the width of the quest card */
+  text-align: center; /* center the text inside the quest card */
+  border-radius: 10px; /* add rounded corners to the quest card */
+  box-shadow: 2px 2px 5px #000; /* add a subtle shadow to the quest card */
+  transition: all 0.3s ease; /* add transition animation to the quest card */
+}
+
+.quest-title {
+  font-size: 24px; /* increase the font size of the quest title */
+  font-weight: bold; /* make the quest title bold */
+  margin-bottom: 10px; /* add some space between the quest title and the other quest details */
+  text-shadow: 1px 1px #000; /* add a subtle shadow to the text */
+  color: #87CEFA;
+}
+
+.quest-card:hover {
+  transform: scale(1.1); /* scale up the quest card when hovered over */
+  background-color: #87CEFA; /* change the background color to light blue when hovered over */
+  box-shadow: 2px 2px 8px #87CEFA; /* change the shadow color to match the background color when hovered over */
+  color: #fff;
+}
+
+.quest-giver, .quest-reward {
+  font-size: 18px; /* reduce the font size of the quest giver and reward */
+  margin-bottom: 10px; /* add some space between the quest giver/reward and the quest description */
+}
+
+.quest-link {
+  color: #87CEFA; /* make the link light blue */
+  text-decoration: none; /* remove the underline from the link */
+  font-weight: bold; /* make the link bold */
+  transition: all 0.3s ease; /* add transition animation to the link */
+}
+.quest-link:hover {
+  color: #fff; /* change the link color to white when hovered over */
+  text-shadow: 1px 1px #87CEFA; /* add a subtle shadow to the text */
+}
+
+.quest-card:hover .quest-title{
+  color: #fff; /* change the title color to yellow when hovered over the card */
+}
+
+
+/* retrieve styling */
+.quest-card.retrieve .quest-title{
+  color: #ffef14;
+}
+
+.quest-card.retrieve:hover {
+  background-color: #ffef14;
+  box-shadow: 2px 2px 8px #ffef14;
+  color: #000;
+}
+
+.quest-card.retrieve:hover .quest-title{
+  color: #000;
+}
+
+/* investigate styling*/
+.quest-card.investigate .quest-title{
+  color: #9b65ff;
+}
+
+.quest-card.investigate:hover {
+  background-color: #5900ff;
+  box-shadow: 2px 2px 8px #5900ff;
+  color: #fff;
+}
+
+.quest-card.investigate:hover .quest-title{
+  color: #fff;
+}
+
+/* delivery styling */
+
+.quest-card.deliver .quest-title{
+  color: #5aff68;
+}
+
+.quest-card.deliver:hover {
+  background-color: #5aff68;
+  box-shadow: 2px 2px 8px #5aff68;
+  color: #000;
+}
+
+.quest-card.deliver:hover .quest-title{
+  color: #000;
+}
+
+/* protect styling */
+
+.quest-card.protect .quest-title{
+  color: #87CEFA;
+}
+
+.quest-card.protect:hover {
+  background-color: #87CEFA;
+  box-shadow: 2px 2px 8px #87CEFA;
+  color: #000;
+}
+
+.quest-card.protect:hover .quest-title{
+  color: #000;
+}
+
+/* hunt styling*/
+
+.quest-card.hunt .quest-title{
+  color: #8B0000;
+}
+
+.quest-card.hunt:hover {
+  background-color: #8B0000;
+  box-shadow: 2px 2px 8px #8B0000;
+  color: #fff;
+}
+
+.quest-card.hunt:hover .quest-title{
+  color: #fff;
+}
+
+/* other styling */
+
+.quest-card.other .quest-title{
+  color: #ffa631;
+}
+
+.quest-card.other:hover {
+  background-color: #ffa631;
+  box-shadow: 2px 2px 8px #ffa631;
+  color: #fff;
+}
+
+.quest-card.other:hover .quest-title{
+  color: #fff;
+}

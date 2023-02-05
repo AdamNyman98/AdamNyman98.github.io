@@ -1,0 +1,54 @@
+.wheel {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.month {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 2em;
+  transform: rotate(calc(360deg / 6 * var(--i) + 270deg)) translate(250px);
+  top:250px;
+  left:250px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  transform-origin: bottom;
+}
+
+
+
+.nathir {
+  background: blue;
+  --i: 0;
+}
+
+.cuprum {
+  background: yellow;
+  --i: 1;
+}
+
+.sumare {
+  background: green;
+  --i: 2;
+}
+
+.solaris {
+  background: orange;
+  --i: 3;
+}
+
+.lomare {
+  background: red;
+  --i: 4;
+}
+
+.future {
+  background: purple;
+  --i: 5;
+}
