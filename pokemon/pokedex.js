@@ -29,7 +29,7 @@ const pokemonListContainer = document.querySelector("#pokemon-list-container");
             index: index,
             name: name,
             image: img,
-            id: id,
+            id: index + 1,
             type: type,
             type2: type2,
             weight: weight,
@@ -48,12 +48,9 @@ const pokemonListContainer = document.querySelector("#pokemon-list-container");
           pokemonType.classList.add(pokemon.type)
         } 
         else pokemonType.classList.add(pokemon.type)
-        
-        
-        
+
         pokemonType2.textContent = pokemon.type2
         
-        console.log(pokemon.type2)
         if(pokemon.type2 === '') pokemonType2.style.display = "none";
         else {pokemonType2.style.display = "inline-block";
           if(pokemonType2.classList.length > 1){
@@ -86,7 +83,232 @@ const pokemonListContainer = document.querySelector("#pokemon-list-container");
 
       
       const pokemons = [];
-      const pokemonIds = ['???','???','???','???',1,'???','???','???','???',2,'???','???','???',]
+      const pokemonIds = [
+        //starters
+        //leaf
+        "bulbasaur",
+        "ivysaur",
+        "venusaur",
+        "chikorita",
+        "bayleef",
+        "meganium",
+        "turtwig",
+        "grotle",
+        "torterra",
+        "chespin",
+        "quilladin",
+        "chesnaught",
+
+        //fire
+        "cyndaquil",
+        "quilava",
+        "typhlosion",
+        "torchic",
+        "combusken",
+        "blaziken",
+        "chimchar",
+        "monferno",
+        "infernape",
+        "fennekin",
+        "braixen",
+        "delphox",
+        "litten",
+        "torracat",
+        "incineroar",
+        "scorbunny",
+        "raboot",
+        "cinderace",
+
+        //water
+        "squirtle",
+        "wartortle",
+        "blastoise",
+        "totodile",
+        "croconaw",
+        "feraligatr",
+        "mudkip",
+        "marshtomp",
+        "swampert",
+        "oshawott",
+        "dewott",
+        "samurott-hisui",
+        "froakie",
+        "frogadier",
+        "greninja",
+        "popplio",
+        "brionne",
+        "primarina",
+
+        //bugs
+        "cutiefly",
+
+        //variants
+        "growlithe-hisui",
+        "arcanine-hisui",
+        "petilil",
+        "lilligant-hisui",
+
+        "meowth-galar",
+        "perrserker",
+        "scream-tail",
+        "great-tusk",
+        "flutter-mane",
+        "slither-wing",
+        "farfetchd-galar",
+        "sirfetchd",
+        "mr-mime-galar",
+        "mr-rime",
+        "yamask-galar",
+        "runerigus",
+
+        "vulpix-alola",
+        "ninetales-alola",
+        "sandshrew-alola",
+        "sandslash-alola",
+        "rattata-alola",
+        "raticate-alola",
+        "cubone",
+        "marowak-alola",
+
+        //klassiker
+        "eevee",
+        "munchlax",
+        "snorlax",
+        "aipom",
+        "ambipom",
+        "wooper",
+      
+      "skitty",
+      "sentret",
+      "buneary",
+      "zigzagoon",
+      "doduo",
+      "wooloo",
+      "stunky",
+
+      "audino",
+      "minccino",
+      "648",
+      
+      "porygon",
+      "purrloin",
+      
+      "tyrogue",
+      "makuhita",
+      "clobbopus",
+      "dratini",
+      "latias",
+      "latios",
+      "drampa",
+      "dreepy",
+      "778",
+      
+      "frillish",
+      
+      
+      "uxie",
+      "oranguru",
+      "ralts",
+      "hatenna",
+      "cresselia",
+      
+      
+      "cleffa",
+      "mawile",
+      "dedenne",
+      "zacian",
+      "milcery",
+      "psyduck",
+      "slowpoke",
+      "lapras",
+      
+      "wooper",
+      
+      "feebas",
+      
+      
+      "phantump",
+      "710",
+      "applin",
+      "skiddo",
+      
+      "492",
+      "deerling",
+      "morelull",
+      "cherubi",
+      "budew",
+      
+      "bounsweet",
+      
+      
+      
+      "pikachu",
+      "plusle",
+      "minun",
+      "dedenne",
+      "mareep",
+      "pachirisu",
+      
+      
+      "numel",
+      "murkrow",
+      "hoppip",
+      "swablu",
+      "noibat",
+      "pikipek",
+      "swinub",
+      "amaura",
+      "875",
+      
+      "swadloon",
+      "marshadow",
+      "chingling",
+      "drifloon",
+      "cottonee",
+      
+      "ducklett",
+      "wobbuffet",  
+      
+      "oddish",
+      "ditto",
+      "poliwag",
+      "spheal",
+      
+      //legendary
+      "celebi",
+      "jirachi",
+      "mew",
+      "kyogre",
+
+      //extended
+      "meowth",
+      "persian",
+      "meowth-alola",
+      "persian-alola",
+      "marowak",
+      "samurott",
+      "typhlosion-hisui",
+      "lilligant",
+      "growlithe",
+      "arcanine",
+      "ponyta-galar",
+      "slowpoke-galar",
+      "farfetchd",
+      "jigglypuff",
+      "phanpy",
+      "misdreavus",
+      "larvesta",
+      "volcarona",
+      "yamask",
+      "zigzagoon-galar",
+      "linoone-galar",
+      "obstagoon",
+      "sandshrew",
+      "rattata",
+      "raticate",
+      "vulpix",
+      "ninetales",
+      '???',]
 
       await Promise.all(pokemonIds.map( async (id,index) => {
         pokemons.push(await getPokemon(id,index))
@@ -99,7 +321,6 @@ const pokemonListContainer = document.querySelector("#pokemon-list-container");
 
       /*
       "indeedee"
-      
       "eevee",
       "aipom",
       "snorlax",
