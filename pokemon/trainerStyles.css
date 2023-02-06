@@ -1,8 +1,11 @@
 #pokemon-list{
     position:absolute;
-    width: 70%;
+    width: 75%;
+    height: 100%;
     top: 0;
     right:0;
+    background: rgb(173,255,243);
+    background: linear-gradient(135deg, rgba(173,255,243,1) 0%, rgba(235,255,252,1) 11%, rgba(173,255,243,1) 23%, rgba(6,6,6,1) 100%);
 }
 
 .pokemonDiv{
@@ -11,12 +14,12 @@
     position: relative;
     display: inline-block;
     margin-right: 25px;
+    margin-left: 25px;
 }
 .img{
     position:absolute;
     width: 200px;
     height: 200px;
-    
     left: 50px;
     z-index: 2;
 }
@@ -45,5 +48,14 @@
     height: 100%;
     top: 0;
     left:0;
-    background-color: blue;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    z-index: 2;
+    border-right: 7px solid white;
+}
+
+.trainerImg{
+    padding:0px;
+    width: 100%;
 }

@@ -31,11 +31,20 @@ pokemonArr.forEach((pokemon) => {
 
 //get trainer
 const trainerPage = document.querySelector("#trainer-page")
-const trainerName = urlParams.get('trainer')
-const trainerDiv = document.createElement('div')
 
+
+const trainerName = urlParams.get('trainer')
 const nameNode = document.createElement('p')
 nameNode.classList.add('trainerName')
 nameNode.textContent = trainerName
 
+const imageUrl = urlParams.get('img')
+const trainerImg = document.createElement('img')
+trainerImg.classList.add('trainerImg')
+trainerImg.src = imageUrl + '.png'
+
+const color = urlParams.get('color')
+
 trainerPage.appendChild(nameNode)
+trainerPage.appendChild(trainerImg)
+trainerPage.style.background = `#${color}`
