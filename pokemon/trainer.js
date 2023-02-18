@@ -2,18 +2,14 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-//get pokemons from parameters and print
-const pokemonList = document.querySelector("#pokemon-list");
-const pokemon = urlParams.get('pokemon')
-const pokemonArr = pokemon.split(',')
-
-pokemonArr.forEach((pokemon) => {
+const addPokemonToList = (pokemon, type) => {
     const pokemonDiv = document.createElement('div')
     pokemonDiv.classList.add('pokemonDiv')
+    let environment; 
 
-    const grass = document.createElement('img')
-    grass.src = "./grass.png"
-    grass.classList.add('grass')
+    if(type == "grass") environment = getGrass()
+    else environment = getPc()
+    
 
     const img = document.createElement('img')
     if(pokemon <= 649){
@@ -24,10 +20,43 @@ pokemonArr.forEach((pokemon) => {
         img.classList.add('img')
     }
 
-    pokemonDiv.appendChild(grass)
     pokemonDiv.appendChild(img)
+    pokemonDiv.appendChild(environment)
     pokemonList.appendChild(pokemonDiv)
+} 
+
+const getPc = () => {
+    const pc = document.createElement('img')
+    pc.src = "./pc.png"
+    pc.classList.add('environment')
+    return pc
+}
+
+const getGrass = () => {
+    const grass = document.createElement('img')
+    grass.src = "./grass.png"
+    grass.classList.add('environment')
+    return grass
+}
+
+//get pokemons from parameters and print
+const pokemonList = document.querySelector("#pokemon-list");
+const pokemon = urlParams.get('pokemon')
+const pokemonArr = pokemon.split(',')
+
+pokemonArr.forEach((pokemon) => {
+    addPokemonToList(pokemon, "grass")
 })
+
+
+const pcPokemon = urlParams.get('pcPokemon')
+const pokemonPcArr = pcPokemon.split(',')
+
+if(pcPokemon != "0"){
+    pokemonPcArr.forEach((pokemon) => {
+        addPokemonToList(pokemon, "pc")
+    })
+}
 
 //get trainer
 const trainerPage = document.querySelector("#trainer-page")
@@ -48,3 +77,4 @@ const color = urlParams.get('color')
 trainerPage.appendChild(nameNode)
 trainerPage.appendChild(trainerImg)
 trainerPage.style.background = `#${color}`
+
