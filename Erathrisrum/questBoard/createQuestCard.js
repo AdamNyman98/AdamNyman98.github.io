@@ -12,27 +12,35 @@ const createCard = (quest) => {
   // Create a new p element for the quest giver
   var questGiver = document.createElement("p");
   questGiver.classList.add("quest-giver"); // Add the "quest-giver" class to the p
-  questGiver.innerHTML = "Given by: " + quest.giver; // Set the inner HTML of the p to the quest giver
+  questGiver.innerHTML = "Kontaktperson: " + quest.giver; // Set the inner HTML of the p to the quest giver
   
   // Create a new p element for the quest reward
   var questReward = document.createElement("p");
   questReward.classList.add("quest-reward"); // Add the "quest-reward" class to the p
-  questReward.innerHTML = "Reward: " + quest.reward; // Set the inner HTML of the p to the quest reward
+  questReward.innerHTML = "Belöning: " + quest.reward; // Set the inner HTML of the p to the quest reward
   
+  // Create a new p element for the quest district
+  var questDistrict = document.createElement("p");
+  questDistrict.classList.add("quest-district"); // Add the "quest-district" class to the p
+  questDistrict.innerHTML = "Distrikt: " + quest.district; // Set the inner HTML of the p to the quest district
+
   // Create a new a element for the "Learn More" link
   var questLink = document.createElement("a");
   questLink.classList.add("quest-link"); // Add the "quest-link" class to the a
-  questLink.innerHTML = "Learn More"; // Set the inner HTML of the a to "Learn More"
-  questLink.href = "quest-info.html"; // Set the href of the a to the link for the quest information
+  //questLink.innerHTML = "Learn More"; // Set the inner HTML of the a to "Learn More"
+  questLink.href = "quest-info.html?quest=" + quest.id; // Set the href of the a to the link for the quest information
   
   // Append the h2, p, and a elements to the div
   questCard.appendChild(questTitle);
   questCard.appendChild(questGiver);
   questCard.appendChild(questReward);
-  questCard.appendChild(questLink);
+  questCard.appendChild(questDistrict)
+  //questCard.appendChild(questLink);
+  questLink.appendChild(questCard)
   
   // Append the div to the quest board
-  document.getElementById("quest-board").appendChild(questCard);
+  //document.getElementById("quest-board").appendChild(questCard);
+  document.getElementById("quest-board").appendChild(questLink);
 }
 
 export default createCard

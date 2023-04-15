@@ -36,20 +36,20 @@ body {
   color: #fff;
 }
 
-.quest-giver, .quest-reward {
+.quest-giver, .quest-reward, .quest-district {
   font-size: 18px; /* reduce the font size of the quest giver and reward */
   margin-bottom: 10px; /* add some space between the quest giver/reward and the quest description */
 }
 
 .quest-link {
-  color: #87CEFA; /* make the link light blue */
+  color: #fff; /* make the link light blue */
   text-decoration: none; /* remove the underline from the link */
   font-weight: bold; /* make the link bold */
   transition: all 0.3s ease; /* add transition animation to the link */
 }
 .quest-link:hover {
   color: #fff; /* change the link color to white when hovered over */
-  text-shadow: 1px 1px #87CEFA; /* add a subtle shadow to the text */
+  /*text-shadow: 1px 1px #87CEFA; /* add a subtle shadow to the text */
 }
 
 .quest-card:hover .quest-title{

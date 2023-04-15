@@ -1,0 +1,59 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#body{
+  background: rgb(120,176,176);
+}
+
+svg {
+  position: fixed;
+  margin-top: 5px;
+  height: 600px;
+  width: 600px;
+}
+
+.seasonText {
+  font: bold 20px sans-serif;
+}
+
+#SeasonInfo{
+  position: absolute;
+  top: 0; 
+  right:0;
+  width: 40%;
+}
+
+.infoCard{
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+#nathirInfo{
+  background-color: #363636;
+  color: white;
+}
+
+#cuprumInfo{
+  background-color: #ff8a41;
+}
+
+#sumareInfo{
+  background-color: #4ffffc;
+}
+
+#solarisInfo{
+  background-color: #fff261;
+}
+
+#aetherisInfo{
+  background-color: purple;
+  color:white;
+}
+
+#lomareInfo{
+  background-color: #c2fffe;
+}

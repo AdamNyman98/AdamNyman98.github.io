@@ -1,0 +1,58 @@
+body{
+    margin:0;
+    padding:0;
+    background: rgb(0,0,0);
+    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(215,215,215,1) 11%, rgba(108,108,108,1) 23%, rgba(6,6,6,1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header {
+    margin:0;
+    position: relative;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,148,148,1) 27%, rgba(255,22,22,1) 68%, rgba(255,0,0,1) 100%);
+    border-bottom: 5px solid black;
+    height: 70px;
+    width: 100%;
+}
+
+header img{
+    position:absolute;
+    width:50px;
+    left:20px;
+    top:10px;
+}
+
+header h2{
+    margin:0;
+    position:absolute;
+    left:100px;
+    top:20px;
+    font-size: 30px;
+}
+
+a {
+    font-size: xx-large;
+    padding: 10px; 
+    border: 3px solid black;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 30px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,145,141,1) 100%);
+}
+
+#first {
+    margin-top: 60px;
+}
+
+#info{
+    margin-top: 70px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(241, 35, 35) 100%);
+}

@@ -21,8 +21,8 @@
 
   .pokemon-image {
     position:absolute;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     top: 20%;
     left: 30px;
     background: linear-gradient(135deg, rgba(0,145,141,1) 0%, rgba(119,237,234,1) 13%, rgba(0,145,141,1) 100%);
@@ -32,11 +32,11 @@
 
   .pokemon-info {
     position:absolute; 
-    left:500px;
+    left:420px;
     top: 20%;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,145,141,1) 100%);
-    width: 400px; 
-    height: 400px;
+    width: 350px; 
+    height: 350px;
     border: 10px solid rgba(0,145,141,1); 
     border-radius: 25px;
   }
@@ -51,16 +51,17 @@
     padding: 10px;
   }
 
-  @media only screen and (max-width: 1350px) {
+  
+  @media only screen and (max-width: 1000px) {
     .pokemon-image {
-      left:30px;
-      top: 5%;
+      left:10%;
+      top: 60px;
       width: 500px;
       height: 500px;
     }
     .pokemon-info {
-      left:30px;
-      top: 50%;
+      left:10%;
+      top: 700px;
       width: 500px;
       height: 500px;
     }
