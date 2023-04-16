@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Server</title>
+    <link rel="stylesheet" type="text/css" href="./code.css">
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item" id="left-section">
+        <label for="left-input">Sektions nummer: </label><br>
+        <input type="text" id="left-input" name="left-input"><br><br>
+        <div id="left-code-section">
+          <div id="left-code"></div>
+          <button id="left-button">Next</button><br><br>
+
+          <label for="left-password">Password: </label><br>
+          <input type="text" id="left-password" name="left-password"><br><br>
+        </div>
+      </div>
+
+      <div class="grid-item" id="right-section">
+        <label for="right-input">Sektions nummer: </label><br>
+        <input type="text" id="right-input" name="right-input"><br><br>
+        <div id="right-code-section">
+          <div id="right-code"></div>
+          <button id="right-button">Next</button><br><br>
+
+          <label for="right-password">Password: </label><br>
+          <input type="text" id="right-password" name="right-password"><br><br>
+        </div>
+      </div>
+
+    </div> <!-- grid container -->
+
+    <div class="grid-container">
+      <div class="grid-item" id="final-section">
+        <p>______________________________________________________</p>
+        <p id="message">locked</p>
+        <div id="final-code-section">
+          <div id="final-code"></div>
+          <button id="final-button">Next</button><br><br>
+
+          <label for="final-password">Password: </label><br>
+          <input type="text" id="final-password" name="final-password"><br><br>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./code.js" type="module"></script>
+  </body>
+</html>
