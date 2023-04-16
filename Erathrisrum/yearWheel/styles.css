@@ -15,14 +15,15 @@ svg {
 }
 
 .seasonText {
-  font: bold 20px sans-serif;
+  font: bold 25px sans-serif;
 }
 
 #SeasonInfo{
   position: absolute;
   top: 0; 
   right:0;
-  width: 40%;
+  width: 60%;
+  font-size: 40px;
 }
 
 .infoCard{
