@@ -37,11 +37,11 @@ function touchStart(e){
 }
 
 function touchMove(e){
-    newX = startX - e.touches[0].clientX;
-    newY = startY - e.touches[0].clientY;
+    newX = startX - e/*.touches[0]*/.clientX;
+    newY = startY - e/*.touches[0]*/.clientY;
 
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
+    startX = e/*.touches[0]*/.clientX;
+    startY = e/*.touches[0]*/.clientY;
 
     card.style.top = (card.offsetTop - newY) >= 0 ? (card.offsetTop - newY)  + 'px' : 0 + 'px';
     card.style.left = (card.offsetLeft - newX) >= 0 ? (card.offsetLeft - newX) + 'px' : 0 + 'px';
