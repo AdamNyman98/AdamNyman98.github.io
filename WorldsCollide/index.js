@@ -1,9 +1,16 @@
 let newX = 0, newY = 0, startX = 0, startY = 0;
 
-const card = document.getElementById('card')
+const cards = document.getElementsByClassName('card')
 
-card.addEventListener('mousedown', mouseDown)
-card.addEventListener('touchstart', touchStart)
+const cardIterator = cards[Symbol.iterator]
+
+for (let i = 0; i < cardIterator.length; i++) {
+    cardIterator.item[i].addEventListener('mousedown', mouseDown)
+    cardIterator.item[i].addEventListener('touchstart', touchStart)
+}
+
+// card.addEventListener('mousedown', mouseDown)
+// card.addEventListener('touchstart', touchStart)
 
 function mouseDown(e){
     startX = e.clientX;
